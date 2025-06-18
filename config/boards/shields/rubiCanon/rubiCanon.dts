@@ -1,6 +1,14 @@
 / {
     compatible = "zmk,keyboard-shield";
 
+    &gpio0 {
+        status = "okay";
+    };
+
+    &gpio1 {
+        status = "okay";
+    };
+
     // Matriz de teclas ROW2COL
     matrix {
         rows = <0x06 0x08 0x17 0x106>;
