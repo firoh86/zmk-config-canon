@@ -23,8 +23,6 @@
                     <&gpio0 29 GPIO_ACTIVE_LOW>,  // C7 - P0.29
                     <&gpio0 15 GPIO_ACTIVE_LOW>,  // C8 - P0.15
                     <&gpio0 13 GPIO_ACTIVE_LOW>;  // C9 - P0.13
-
-        debounce-delay-ms = <5>;
     };
         //TRANSFORM
 
