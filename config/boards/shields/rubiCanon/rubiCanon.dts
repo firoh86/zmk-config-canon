@@ -9,6 +9,7 @@
         status = "okay";
     };
 
+*/
     // Matriz de teclas ROW2COL
     matrix {
         rows = <0x06 0x08 0x17 0x106>;
@@ -39,4 +40,5 @@
         gpios = <&gpio1 4 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
         label = "Extra Button";
     };
+    /*
 };

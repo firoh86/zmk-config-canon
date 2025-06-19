@@ -1,6 +1,6 @@
 if SHIELD_MY_KEYBOARD
 
-# Name must be less than 16 characters long!
+# El nombre debe contener menos de 16 carácteres!
 config ZMK_KEYBOARD_NAME
     default "rubiCanon"
 

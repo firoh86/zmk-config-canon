@@ -1,0 +1,8 @@
+file_format: "1"
+id: rubiCanon
+name: rubiCanon
+type: shield
+url: 
+requires: [pro_micro]
+features:
+  - keys
