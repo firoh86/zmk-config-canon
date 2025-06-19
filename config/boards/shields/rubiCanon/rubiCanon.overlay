@@ -50,7 +50,6 @@
         transform = <&default_transform>; // Label of the matrix transform for this layout
     };
     //CHOSEN, para elegir el layout por defecto
-    {
     chosen {
         zmk,physical-layout = &physical_layout0;
         // Other chosen items
