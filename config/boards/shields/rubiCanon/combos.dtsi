@@ -1,0 +1,70 @@
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>; // Q y W
+            bindings = <&kp ESC>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <10 11>; // A y S
+            bindings = <&kp TAB>;
+        };
+        combo_shift {
+            timeout-ms = <50>;
+            key-positions = <20 21>; // Z y X
+            bindings = <&kp LSFT>;
+        };
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <9 10>; // P y +
+            bindings = <&kp BSPC>;
+        };
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <19 20>; // L y Ñ
+            bindings = <&kp ENTER>;
+        };
+        combo_rshift {
+            timeout-ms = <50>;
+            key-positions = <28 29>; // . y -
+            bindings = <&kp RSFT>;
+        };
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <0 10>; // Q y A
+            bindings = <&kp DEL>;
+        };
+        combo_interrogacion_abre {
+        timeout-ms = <50>;
+        key-positions = <3 4>; // R y T
+        bindings = <&kp RA(LSHIFT(N6))>;
+        };
+        combo_interrogacion_cierra {
+            timeout-ms = <50>;
+            key-positions = <5 6>; // Y y U
+            bindings = <&kp LSHIFT(MINUS)>;
+        };
+        combo_acento {
+            timeout-ms = <50>;
+            key-positions = <18 19>; // L y Ñ
+            bindings = <&kp APOSTROPHE>;
+        };
+        combo_lgui {
+            timeout-ms = <50>;
+            key-positions = <34 35>; // LGUI
+            bindings = <&kp LGUI>;
+       };
+    };
+};
+/*  Ejemplo de combos activos en varias capas
+
+    combo_esc {
+    timeout-ms = <50>;
+    key-positions = <0 1>;
+    bindings = <&kp ESC>;
+    layers = <0 1>; // Activo en capa 0 y 1
+};
+*/
