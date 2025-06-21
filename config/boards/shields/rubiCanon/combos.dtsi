@@ -6,65 +6,77 @@
             timeout-ms = <50>;
             key-positions = <0 1>; // Q y W
             bindings = <&kp ESC>;
+            layers = <0>;
         };
+
         combo_tab {
             timeout-ms = <50>;
             key-positions = <10 11>; // A y S
             bindings = <&kp TAB>;
+            layers = <0>;
         };
+
         combo_shift {
             timeout-ms = <50>;
             key-positions = <20 21>; // Z y X
             bindings = <&kp LSFT>;
+            layers = <0>;
         };
+
         combo_bspc {
             timeout-ms = <50>;
             key-positions = <9 10>; // P y +
             bindings = <&kp BSPC>;
+            layers = <0>;
         };
+
         combo_enter {
             timeout-ms = <50>;
             key-positions = <19 20>; // L y Ñ
             bindings = <&kp ENTER>;
+            layers = <0>;
         };
+
         combo_rshift {
             timeout-ms = <50>;
             key-positions = <28 29>; // . y -
             bindings = <&kp RSFT>;
+            layers = <0>;
         };
+
         combo_del {
             timeout-ms = <50>;
             key-positions = <0 10>; // Q y A
             bindings = <&kp DEL>;
+            layers = <0>;
         };
+
         combo_interrogacion_abre {
-        timeout-ms = <50>;
-        key-positions = <3 4>; // R y T
-        bindings = <&kp RA(LSHIFT(N6))>;
+            timeout-ms = <50>;
+            key-positions = <3 4>; // R y T
+            bindings = <&kp RA(N6)>; // Corregido: no se permiten expresiones anidadas como RA(LSHIFT(N6))
+            layers = <0>;
         };
+
         combo_interrogacion_cierra {
             timeout-ms = <50>;
             key-positions = <5 6>; // Y y U
-            bindings = <&kp LSHIFT(MINUS)>;
+            bindings = <&kp LSHIFT MINUS>; // También corregido: separa modificador y tecla
+            layers = <0>;
         };
+
         combo_acento {
             timeout-ms = <50>;
             key-positions = <18 19>; // L y Ñ
             bindings = <&kp APOSTROPHE>;
+            layers = <0>;
         };
+
         combo_lgui {
             timeout-ms = <50>;
             key-positions = <34 35>; // LGUI
             bindings = <&kp LGUI>;
-       };
+            layers = <0>;
+        };
     };
 };
-/*  Ejemplo de combos activos en varias capas
-
-    combo_esc {
-    timeout-ms = <50>;
-    key-positions = <0 1>;
-    bindings = <&kp ESC>;
-    layers = <0 1>; // Activo en capa 0 y 1
-};
-*/
