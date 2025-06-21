@@ -44,23 +44,4 @@
             >;
         };
     };
-      encoder_1_ccw {
-            bindings = <&kp VOLUME_DOWN>;
-        };
-        encoder_1_cw {
-            bindings = <&kp VOLUME_UP>;
-        };
-        encoder_1_button {
-            bindings = <&kp MUTE>;
-        };
-
-        encoder_2_ccw {
-            bindings = <&mk WH_D>;
-        };
-        encoder_2_cw {
-            bindings = <&mk WH_U>;
-        };
-        encoder_2_button {
-            bindings = <&kp HOME>;
-        };
 };
