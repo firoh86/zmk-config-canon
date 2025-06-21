@@ -1,3 +1,5 @@
 # Sin espacios tras la coma o en el nombre del teclado!
-config SHIELD_MY_KEYBOARD
+
+
+config SHIELD_rubiCanon
     def_bool $(shields_list_contains,rubiCanon)

@@ -1,4 +1,4 @@
-if SHIELD_MY_KEYBOARD
+if SHIELD_rubiCanon
 
 # El nombre debe contener menos de 16 carácteres!
 config ZMK_KEYBOARD_NAME
