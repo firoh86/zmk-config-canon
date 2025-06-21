@@ -1,18 +1,11 @@
 /* rubiCanon.overlay  —  SuperMini nRF52840  (10×4, col2row) */
 #include <dt-bindings/zmk/matrix_transform.h>
 
- 
+ &gpio0 { status = "okay"; };
+ &gpio1 { status = "okay"; };
 
 / {
     compatible = "zmk,keyboard-shield";
-
-    /* habilitamos ambos puertos */
-    &gpio0 { status = "okay"; };
-    &gpio1 { status = "okay"; };
-    
-
-   
-
     /* ---------- KSCAN ---------- */
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
