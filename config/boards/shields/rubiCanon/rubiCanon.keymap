@@ -43,8 +43,8 @@
                 &kp LCTRL &kp LALT &trans             &trans &kp SPACE &kp RALT
             >;
         };
-
-        encoder_1_ccw {
+    };
+      encoder_1_ccw {
             bindings = <&kp VOLUME_DOWN>;
         };
         encoder_1_cw {
@@ -63,5 +63,4 @@
         encoder_2_button {
             bindings = <&kp HOME>;
         };
-    };
 };
