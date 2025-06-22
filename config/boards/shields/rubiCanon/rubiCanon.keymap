@@ -45,48 +45,15 @@
         };
     };
 
-        behaviors {
-        encoder_1_ccw: behavior_encoder_ccw {
-            compatible = "zmk,behavior-encoder-ccw";
-            label = "ENCODER_1_CCW";
-            #binding-cells = <1>;
-            bindings = <&kp KC_VOLD>;
+        &sensor_binding1 {
+        sensor = <&ec11_left>;
+        label = "ENC_LEFT";
+        binding = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-
-        encoder_1_cw: behavior_encoder_cw {
-            compatible = "zmk,behavior-encoder-cw";
-            label = "ENCODER_1_CW";
-            #binding-cells = <1>;
-            bindings = <&kp KC_VOLU>;
+        &sensor_binding2 {
+        sensor = <&ec11_right>;
+        label = "ENC_RIGHT";
+        binding = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-
-        encoder_1_button: behavior_key {
-            compatible = "zmk,behavior-key";
-            label = "ENCODER_1_BUTTON";
-            #binding-cells = <1>;
-            bindings = <&kp KC_MUTE>;
-        };
-
-        encoder_2_ccw: behavior_encoder_ccw {
-            compatible = "zmk,behavior-encoder-ccw";
-            label = "ENCODER_2_CCW";
-            #binding-cells = <1>;
-            bindings = <&mk KC_WH_D>;
-        };
-
-        encoder_2_cw: behavior_encoder_cw {
-            compatible = "zmk,behavior-encoder-cw";
-            label = "ENCODER_2_CW";
-            #binding-cells = <1>;
-            bindings = <&mk KC_WH_U>;
-        };
-
-        encoder_2_button: behavior_key {
-            compatible = "zmk,behavior-key";
-            label = "ENCODER_2_BUTTON";
-            #binding-cells = <1>;
-            bindings = <&kp KC_HOME>;
-        };
-    };
 
 };
