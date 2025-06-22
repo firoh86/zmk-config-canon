@@ -48,11 +48,11 @@
 
         /* ---------- ENCODERS ---------- */
         encoder1_cw {
-            bindings = <&kp K_VOL_UP>; // volumen +
+            bindings = <&kp C_VOL_UP>; // volumen +
         };
 
         encoder1_ccw {
-            bindings = <&kp K_VOL_DOWN>; // volumen -
+            bindings = <&kp C_VOL_DN>; // volumen -
         };
 
         encoder2_cw {
