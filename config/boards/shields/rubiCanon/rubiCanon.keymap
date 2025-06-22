@@ -49,8 +49,8 @@
         sensor-behaviors {
         compatible = "zmk,sensor-behaviors";
 
-        encoder_1 {
-            sensor = <&encoder_1>;
+         encoder_1 {
+            sensor = <&encoder1>;
             bindings = <
                 &encoder_1_ccw 0
                 &encoder_1_cw 0
@@ -58,7 +58,7 @@
         };
 
         encoder_2 {
-            sensor = <&encoder_2>;
+            sensor = <&encoder2>;
             bindings = <
                 &encoder_2_ccw 0
                 &encoder_2_cw 0
@@ -69,14 +69,14 @@
     inputs {
         compatible = "zmk,input-gpio";
 
-        encoder_1_btn_input: input_encoder_1_button {
-            input-gpios = <&encoder_1_button>;
+        encoder1_btn_input: input_encoder1_button {
+            input-gpios = <&encoder1_button>;
             label = "ENCODER_1_BUTTON_INPUT";
             bindings = <&consumer C_MUTE>;
         };
 
-        encoder_2_btn_input: input_encoder_2_button {
-            input-gpios = <&encoder_2_button>;
+        encoder2_btn_input: input_encoder2_button {
+            input-gpios = <&encoder2_button>;
             label = "ENCODER_2_BUTTON_INPUT";
             bindings = <&kp HOME>;
         };
