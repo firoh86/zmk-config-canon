@@ -11,14 +11,7 @@
     &gpio1 {
         status = "okay";
     };
-    /* ---------- encoder STATUS ---------- */
-    &left_encoder {
-    status = "okay";
-    };
-    &right_encoder {
-    status = "okay";
-    };
-
+   
 
 /{
     compatible = "zmk,keyboard-shield";
@@ -105,6 +98,15 @@
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <20>;
     };
+
+     /* ---------- encoder STATUS ---------- */
+    &left_encoder {
+    status = "okay";
+    };
+    &right_encoder {
+    status = "okay";
+    };
+
 
 };
 
