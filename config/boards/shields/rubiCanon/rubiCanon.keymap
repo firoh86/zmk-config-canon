@@ -46,12 +46,13 @@
         };
     };
 
+        /* ---------- ENCODERS ---------- */
         encoder1_cw {
-            bindings = <&inc_vol>; // volumen +
+            bindings = <&kp K_VOL_UP>; // volumen +
         };
 
         encoder1_ccw {
-            bindings = <&dec_vol>; // volumen -
+            bindings = <&kp K_VOL_DOWN>; // volumen -
         };
 
         encoder2_cw {
@@ -62,9 +63,9 @@
             bindings = <&kp PG_UP>; // Page Up
         };
 
-/*
+        /* ---------- buttons ---------- */
         encoder1_button_binding {
-            bindings = <&kp MUTE>;
+            bindings = <&kp K_MUTE>;
         };
 
         encoder2_button_binding {
@@ -74,7 +75,4 @@
         extra_button_binding {
             bindings = <&kp CAPSLOCK>; // Caps Lock
         };
-    
-*/
-
 };
