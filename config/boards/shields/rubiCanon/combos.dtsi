@@ -5,82 +5,77 @@
         combo_esc {
             timeout-ms = <200>;
             key-positions = <0 1>; // Q y W
-            bindings = [ &kp ESC ];
+            bindings = <&kp ESC>;
             layers = <0>;
         };
 
         combo_tab {
             timeout-ms = <200>;
             key-positions = <10 11>; // A y S
-            bindings = [ &kp TAB ];
+            bindings = <&kp TAB>;
             layers = <0>;
         };
 
         combo_shift {
             timeout-ms = <200>;
             key-positions = <20 21>; // Z y X
-            bindings = [ &kp LSFT ];
+            bindings = <&kp LSFT>;
             layers = <0>;
         };
 
         combo_bspc {
             timeout-ms = <200>;
-            key-positions = <9 10>; // P y +
-            bindings = [ &kp BSPC ];
+            key-positions = <8 9>; // P y +
+            bindings = <&kp BSPC>;
             layers = <0>;
         };
 
         combo_enter {
             timeout-ms = <200>;
-            key-positions = <19 20>; // L y Ñ
-            bindings = [ &kp ENTER ];
+            key-positions = <18 19>; // L y Ñ
+            bindings = <&kp ENTER>;
             layers = <0>;
         };
 
         combo_rshift {
             timeout-ms = <200>;
             key-positions = <28 29>; // . y -
-            bindings = [ &kp RSFT ];
+            bindings = <&kp RSFT>;
             layers = <0>;
         };
 
         combo_del {
             timeout-ms = <200>;
             key-positions = <0 10>; // Q y A
-            bindings = [ &kp DEL ];
+            bindings = <&kp DEL>;
             layers = <0>;
         };
 
         combo_interrogacion_abre {
             timeout-ms = <200>;
             key-positions = <3 4>; // R y T
-            // Si quieres enviar Shift + 6 para el símbolo ?, no puedes usar &kp RA(N6)
-            // Debes usar &kp N6 con Shift activado o hacer un binding custom si ZMK lo soporta
-            // Aquí un ejemplo simple para enviar el carácter '?':
-            bindings = [ &kp N6 ]; // Esto enviará '6', para '?' tendrías que mapearlo con Shift
+            bindings = <&kp RA(N6)>; // Corregido: no se permiten expresiones anidadas como RA(LSHIFT(N6))
             layers = <0>;
         };
 
         combo_interrogacion_cierra {
             timeout-ms = <200>;
             key-positions = <5 6>; // Y y U
-            // Para Shift + Minus, usa bindings para cada tecla o una macro si es necesario
-            // Simplemente mandar el guión bajo puede requerir Shift + Minus
-            bindings = [ &kp MINUS ]; // Solo el guión, para '_' habría que usar shift
+            bindings = <&kp LSHIFT MINUS>; // También corregido: separa modificador y tecla
             layers = <0>;
         };
 
         combo_acento {
             timeout-ms = <200>;
-            key-positions = <18 19>; // L y Ñ
-            bindings = [ &kp APOSTROPHE ];
+            key-positions = <17 18>; // L y Ñ
+            bindings = <&kp APOSTROPHE>;
             layers = <0>;
         };
 
         combo_lgui {
             timeout-ms = <200>;
-            key-positions = <34 35>; // LGUI
-            bindings = [ &kp LGUI ];
+            key-positions = <33 34>; // LGUI
+            bindings = <&kp LGUI>;
             layers = <0>;
         };
     };
