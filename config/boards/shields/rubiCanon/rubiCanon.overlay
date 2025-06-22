@@ -66,25 +66,6 @@
 
     /* ---------- ENCODER ---------- */
 
-            &ec11_left {
-            compatible = "alps,ec11";
-            a-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
-            b-gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
-            steps = <24>;
-            };
-
-            &sensors {
-                triggers-per-rotation = <24>;
-            };
-            &ec11_right {
-            compatible = "alps,ec11";
-            a-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
-            b-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
-            steps = <24>;
-            };
-
-            &sensors {
-                triggers-per-rotation = <24>;
-            };
+          
 
 };

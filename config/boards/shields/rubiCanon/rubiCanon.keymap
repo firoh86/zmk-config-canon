@@ -45,15 +45,5 @@
         };
     };
 
-        &sensor_binding1 {
-        sensor = <&ec11_left>;
-        label = "ENC_LEFT";
-        binding = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-        &sensor_binding2 {
-        sensor = <&ec11_right>;
-        label = "ENC_RIGHT";
-        binding = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
+       
 };
