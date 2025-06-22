@@ -71,7 +71,7 @@
         encoder_1_btn_input: input_encoder_1_button {
             input-gpios = <&encoder_1_button>;
             label = "ENCODER_1_BUTTON_INPUT";
-            bindings = <&kp MUTE>;
+            bindings = <&consumer C_MUTE>;
         };
 
         encoder_2_btn_input: input_encoder_2_button {
