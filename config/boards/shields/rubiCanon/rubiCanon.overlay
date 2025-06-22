@@ -65,25 +65,25 @@
 
 
     /* ---------- ENCODER ---------- */
-     rotary_encoders {
+    rotary_encoders {
         compatible = "zmk,rotary-encoder";
 
         encoder_1: encoder_1 {
             label = "ENCODER_1";
-            gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>, <&gpio1 2 GPIO_ACTIVE_HIGH>, <&gpio1 7 GPIO_ACTIVE_LOW>;
+            gpios = <&gpio1 1 GPIO_ACTIVE_HIGH &gpio1 2 GPIO_ACTIVE_HIGH &gpio1 7 GPIO_ACTIVE_LOW>;
             #rotary-cells = <2>;
             debounce-interval-ms = <1>;
 
-            bindings = <&consumer_volume_down>, <&consumer_volume_up>, <&consumer_mute>;
+            bindings = <&consumer_volume_down &consumer_volume_up &consumer_mute>;
         };
 
         encoder_2: encoder_2 {
             label = "ENCODER_2";
-            gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>, <&gpio0 10 GPIO_ACTIVE_HIGH>, <&gpio1 11 GPIO_ACTIVE_LOW>;
+            gpios = <&gpio0 9 GPIO_ACTIVE_HIGH &gpio0 10 GPIO_ACTIVE_HIGH &gpio1 11 GPIO_ACTIVE_LOW>;
             #rotary-cells = <2>;
             debounce-interval-ms = <1>;
 
-            bindings = <&mouse_wheel_down>, <&mouse_wheel_up>, <&kp HOME>;
+            bindings = <&mouse_wheel_down &mouse_wheel_up &kp HOME>;
         };
     };
 
