@@ -44,12 +44,5 @@
             >;
         };
     };
-                &encoder_1 {
-                bindings = <&consumer_volume_down>, <&consumer_volume_up>, <&consumer_mute>;
-                };
-
-                &encoder_2 {
-                    bindings = <&mouse_wheel_down>, <&mouse_wheel_up>, <&kp HOME>;
-                };
 
 };
