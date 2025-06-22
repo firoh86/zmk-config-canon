@@ -66,26 +66,26 @@
 
     /* ---------- ENCODER ---------- */
         encoders {
-        compatible = "zmk,encoders";
+            compatible = "zmk,encoders";
 
-        encoder_1: encoder_1 {
+            encoder_1: encoder_1 {
             label = "ENCODER_1";
-            pin_a = <&gpio1 1 GPIO_ACTIVE_HIGH>;   // P1.01
-            pin_b = <&gpio1 2 GPIO_ACTIVE_HIGH>;   // P1.02
-            pin_btn = <&gpio1 7 GPIO_ACTIVE_LOW>;  // P1.07
+            a-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;   // P1.01
+            b-gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;   // P1.02
+            button-gpios = <&gpio1 7 GPIO_ACTIVE_LOW>;  // P1.07
 
             bindings = <&encoder_1_ccw &encoder_1_cw &encoder_1_button>;
-        };
+            };
 
-        encoder_2: encoder_2 {
-            label = "ENCODER_2";
-            pin_a = <&gpio0 9 GPIO_ACTIVE_HIGH>;   // P0.09
-            pin_b = <&gpio0 10 GPIO_ACTIVE_HIGH>;  // P0.10
-            pin_btn = <&gpio1 11 GPIO_ACTIVE_LOW>; // P1.11
+            encoder_2: encoder_2 {
+                label = "ENCODER_2";
+                a-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;   // P0.09
+                b-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;  // P0.10
+                button-gpios = <&gpio1 11 GPIO_ACTIVE_LOW>; // P1.11
 
-            bindings = <&encoder_2_ccw &encoder_2_cw &encoder_2_button>;
+                bindings = <&encoder_2_ccw &encoder_2_cw &encoder_2_button>;
+            };
         };
-    };
 
     behaviors {
         encoder_1_ccw: behavior_encoder_ccw {
