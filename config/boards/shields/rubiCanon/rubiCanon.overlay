@@ -65,19 +65,14 @@
 
 
     /* ---------- ENCODER ---------- */
-
-     left_encoder: left_encoder { 
-        compatible = "alps,ec11";
-        a-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <30>;
-        status = "okay";
-    };
-
-    sensors: sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
-        triggers-per-rotation = <30>;
+     sensors {
+        left_encoder: encoder_left {
+            compatible = "alps,ec11";
+            label = "LEFT_ENCODER";
+            a-pin = <&gpio0 9 GPIO_ACTIVE_HIGH>;
+            b-pin = <&gpio0 10 GPIO_ACTIVE_HIGH>;
+            steps = <24>; // Or the number of steps/detents per rotation from datasheet
+        };
     };
 
 };

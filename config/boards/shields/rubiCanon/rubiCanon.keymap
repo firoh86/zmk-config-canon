@@ -44,4 +44,12 @@
             >;
         };
     };
+
+    behaviors {
+     enc_left: encoder_left {
+        compatible = "zmk,behavior-encoder";
+        label = "LEFT_ENCODER";
+        bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+    };
+};
 };
