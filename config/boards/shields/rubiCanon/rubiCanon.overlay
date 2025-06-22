@@ -66,6 +66,39 @@
 
     /* ---------- ENCODER ---------- */
 
-          
+          &gpio0 {
+    status = "okay";
+};
+
+&gpio1 {
+    status = "okay";
+};
+
+encoder_1: encoder_1 {
+    compatible = "zmk,encoder";
+    a-gpios = <&gpio0 9 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    b-gpios = <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+};
+
+encoder_2: encoder_2 {
+    compatible = "zmk,encoder";
+    a-gpios = <&gpio1 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    b-gpios = <&gpio1 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+};
+
+encoder_1_button: encoder_1_button {
+    gpios = <&gpio1 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    label = "Encoder 1 Button";
+};
+
+encoder_2_button: encoder_2_button {
+    gpios = <&gpio1 11 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    label = "Encoder 2 Button";
+};
+
+extra_button: extra_button {
+    gpios = <&gpio1 4 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    label = "Extra Button";
+};
 
 };

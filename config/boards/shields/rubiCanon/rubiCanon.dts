@@ -1,3 +1,4 @@
+/* 
 / {
     compatible = "zmk,keyboard-shield";
 
@@ -31,3 +32,4 @@
         label = "Extra Button";
     };
 };
+*/
