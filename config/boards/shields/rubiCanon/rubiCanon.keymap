@@ -7,12 +7,10 @@
 
  / {
 
-    behaviors {
-        LEncoder: LEncoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&inc_dec_kp C_VOL_UP>, <&inc_dec_kp C_VOL_DN>;
-        };
+      sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <20>;
     };
 
     
@@ -26,7 +24,7 @@
                 &kp Z &kp X &kp C &kp V &kp B        &kp N &kp M &kp COMMA &kp DOT &kp SLASH
                 &kp LCTRL &kp LALT &mo 1             &mo 2 &kp SPACE &kp RALT
             >;
-            sensor-bindings = <&LEncoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         layer_1 {
