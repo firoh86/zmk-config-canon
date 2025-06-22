@@ -65,70 +65,26 @@
 
 
     /* ---------- ENCODER ---------- */
-        encoders {
-            compatible = "zmk,encoders";
+      encoders {
+                compatible = "zmk,encoders";
 
-            encoder_1: encoder_1 {
-            label = "ENCODER_1";
-            a-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;   // P1.01
-            b-gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;   // P1.02
-            button-gpios = <&gpio1 7 GPIO_ACTIVE_LOW>;  // P1.07
+                encoder_1: encoder_1 {
+                    label = "ENCODER_1";
+                    pin_a = <&gpio1 1 GPIO_ACTIVE_HIGH>;
+                    pin_b = <&gpio1 2 GPIO_ACTIVE_HIGH>;
+                    pin_btn = <&gpio1 7 GPIO_ACTIVE_LOW>;
 
-            bindings = <&encoder_1_ccw &encoder_1_cw &encoder_1_button>;
+                    bindings = <&encoder_1_ccw &encoder_1_cw &encoder_1_button>;
+                };
+
+                encoder_2: encoder_2 {
+                    label = "ENCODER_2";
+                    pin_a = <&gpio0 9 GPIO_ACTIVE_HIGH>;
+                    pin_b = <&gpio0 10 GPIO_ACTIVE_HIGH>;
+                    pin_btn = <&gpio1 11 GPIO_ACTIVE_LOW>;
+
+                    bindings = <&encoder_2_ccw &encoder_2_cw &encoder_2_button>;
+                };
             };
-
-            encoder_2: encoder_2 {
-                label = "ENCODER_2";
-                a-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;   // P0.09
-                b-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;  // P0.10
-                button-gpios = <&gpio1 11 GPIO_ACTIVE_LOW>; // P1.11
-
-                bindings = <&encoder_2_ccw &encoder_2_cw &encoder_2_button>;
-            };
-        };
-
-    behaviors {
-        encoder_1_ccw: behavior_encoder_ccw {
-            compatible = "zmk,behavior-encoder-ccw";
-            label = "ENCODER_1_CCW";
-            #binding-cells = <1>;
-            bindings = <&kp KC_VOLD>;  // volumen abajo
-        };
-
-        encoder_1_cw: behavior_encoder_cw {
-            compatible = "zmk,behavior-encoder-cw";
-            label = "ENCODER_1_CW";
-            #binding-cells = <1>;
-            bindings = <&kp KC_VOLU>;  // volumen arriba
-        };
-
-        encoder_1_button: behavior_key {
-            compatible = "zmk,behavior-key";
-            label = "ENCODER_1_BUTTON";
-            #binding-cells = <1>;
-            bindings = <&kp KC_MUTE>;
-        };
-
-        encoder_2_ccw: behavior_encoder_ccw {
-            compatible = "zmk,behavior-encoder-ccw";
-            label = "ENCODER_2_CCW";
-            #binding-cells = <1>;
-            bindings = <&mk KC_WH_D>;  // scroll abajo
-        };
-
-        encoder_2_cw: behavior_encoder_cw {
-            compatible = "zmk,behavior-encoder-cw";
-            label = "ENCODER_2_CW";
-            #binding-cells = <1>;
-            bindings = <&mk KC_WH_U>;  // scroll arriba
-        };
-
-        encoder_2_button: behavior_key {
-            compatible = "zmk,behavior-key";
-            label = "ENCODER_2_BUTTON";
-            #binding-cells = <1>;
-            bindings = <&kp KC_HOME>;
-        };
-    };
 
 };
