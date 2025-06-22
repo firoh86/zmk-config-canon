@@ -6,18 +6,10 @@
 
 
  / {
-    /*
       sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <24>;
-    };
-    */
-
-    sensors: sensors {
-    compatible = "zmk,keymap-sensors";
-    sensors = <&right_encoder>;
-    triggers-per-rotation = <24>;
     };
 
     
@@ -32,8 +24,7 @@
                 &kp LCTRL &kp LALT &mo 1             &mo 2 &kp SPACE &kp RALT
             >;
             //sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-
-            sensor-bindings = <&inc_dec_kp N1 N0>;
+            sensor-bindings = <&inc_dec_kp N1 N0 &inc_dec_kp N2 N3>;
         };
 
         layer_1 {
