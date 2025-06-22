@@ -44,5 +44,13 @@
             >;
         };
     };
+     &encoder1 {
+        cw {
+            bindings = <&kp KC_VOLU>; // Clockwise: volumen arriba
+        };
+        ccw {
+            bindings = <&kp KC_VOLD>; // Counter-clockwise: volumen abajo
+        };
+    };
 
 };
