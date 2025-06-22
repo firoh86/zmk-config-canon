@@ -1,6 +1,5 @@
 /* rubiCanon.overlay — SuperMini nRF52840 (10×4, col2row) */
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <dt-bindings/zmk/keys.h>
 
 
 /{
@@ -12,28 +11,30 @@
         diode-direction = "col2row";
         wakeup-source;
 
- /* 10 columnas */
-col-gpios = <
-    &gpio0 20 GPIO_ACTIVE_HIGH
-    &gpio0 22 GPIO_ACTIVE_HIGH
-    &gpio0 24 GPIO_ACTIVE_HIGH
-    &gpio1  0 GPIO_ACTIVE_HIGH
-    &gpio0 11 GPIO_ACTIVE_HIGH
-    &gpio0 31 GPIO_ACTIVE_HIGH
-    &gpio0  2 GPIO_ACTIVE_HIGH
-    &gpio0 29 GPIO_ACTIVE_HIGH
-    &gpio1 15 GPIO_ACTIVE_HIGH
-    &gpio1 13 GPIO_ACTIVE_HIGH
->;
+    /* 10 columnas */
+    col-gpios = <
+        &gpio0 20 GPIO_ACTIVE_HIGH
+        &gpio0 22 GPIO_ACTIVE_HIGH
+        &gpio0 24 GPIO_ACTIVE_HIGH
+        &gpio1  0 GPIO_ACTIVE_HIGH
+        &gpio0 11 GPIO_ACTIVE_HIGH
+        &gpio0 31 GPIO_ACTIVE_HIGH
+        &gpio0  2 GPIO_ACTIVE_HIGH
+        &gpio0 29 GPIO_ACTIVE_HIGH
+        &gpio1 15 GPIO_ACTIVE_HIGH
+        &gpio1 13 GPIO_ACTIVE_HIGH
+    >;
 
-/* 4 filas */
-row-gpios = <
-    &gpio0  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
-    &gpio0  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
-    &gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
-    &gpio1  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
->;
+    /* 4 filas */
+    row-gpios = <
+        &gpio0  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+        &gpio0  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+        &gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+        &gpio1  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+    >;
+       
 
+      
     };
 
     /* ---------- TRANSFORM ---------- */
