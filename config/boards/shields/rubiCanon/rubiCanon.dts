@@ -8,14 +8,12 @@
         compatible = "zmk,encoder";
         a-gpios = <&gpio0 9 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
         b-gpios = <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-        steps = <40>;
     };
 
     encoder_2: encoder_2 {
         compatible = "zmk,encoder";
         a-gpios = <&gpio1 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
         b-gpios = <&gpio1 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-        steps = <40>;
     };
 
     encoder_1_button: encoder_1_button {

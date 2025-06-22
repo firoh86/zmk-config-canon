@@ -48,7 +48,7 @@
         sensor-behaviors {
         compatible = "zmk,sensor-behaviors";
 
-        encoder1 {
+        encoder_1 {
             sensor = <&encoder_1>;
             bindings = <
                 &encoder_1_ccw 0
@@ -56,7 +56,7 @@
             >;
         };
 
-        encoder2 {
+        encoder_2 {
             sensor = <&encoder_2>;
             bindings = <
                 &encoder_2_ccw 0
