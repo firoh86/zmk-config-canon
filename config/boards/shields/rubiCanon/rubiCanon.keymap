@@ -46,45 +46,31 @@
         };
     };
 
-        sensor-behaviors {
-        compatible = "zmk,sensor-behaviors";
-
-         encoder_1 {
-            sensor = <&encoder1>;
-            bindings = <
-                &encoder_1_ccw 0
-                &encoder_1_cw 0
-            >;
+        encoder1_cw {
+            bindings = <&inc_vol>; // volumen +
         };
 
-        encoder_2 {
-            sensor = <&encoder2>;
-            bindings = <
-                &encoder_2_ccw 0
-                &encoder_2_cw 0
-            >;
-        };
-    };
-
-    inputs {
-        compatible = "zmk,input-gpio";
-
-        encoder1_btn_input: input_encoder1_button {
-            input-gpios = <&encoder1_button>;
-            label = "ENCODER_1_BUTTON_INPUT";
-            bindings = <&consumer C_MUTE>;
+        encoder1_ccw {
+            bindings = <&dec_vol>; // volumen -
         };
 
-        encoder2_btn_input: input_encoder2_button {
-            input-gpios = <&encoder2_button>;
-            label = "ENCODER_2_BUTTON_INPUT";
-            bindings = <&kp HOME>;
+        encoder2_cw {
+            bindings = <&kp PG_DN>;
         };
 
-        extra_btn_input: input_extra_button {
-            input-gpios = <&extra_button>;
-            label = "EXTRA_BUTTON_INPUT";
-            bindings = <&kp ESC>;
+        encoder2_ccw {
+            bindings = <&kp PG_UP>; // Page Up
         };
-    };
+
+        encoder1_button_binding {
+            bindings = <&kp MUTE>;
+        };
+
+        encoder2_button_binding {
+            bindings = <&kp HOME>; // Botón → Home
+        };
+
+        extra_button_binding {
+            bindings = <&kp CAPSLOCK>; // Caps Lock
+        };
 };
