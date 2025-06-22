@@ -2,6 +2,17 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 
+
+    /* ---------- GPIO STATUS ---------- */
+    &gpio0 {
+        status = "okay";
+    };
+
+    &gpio1 {
+        status = "okay";
+    };
+
+
 /{
     compatible = "zmk,keyboard-shield";
 
@@ -61,16 +72,6 @@
 
     chosen {
         zmk,physical-layout = &physical_layout0;
-    };
-
-
-    /* ---------- GPIO STATUS ---------- */
-    &gpio0 {
-        status = "okay";
-    };
-
-    &gpio1 {
-        status = "okay";
     };
 
     /* ---------- ENCODERS ---------- */
