@@ -74,14 +74,6 @@
         zmk,physical-layout = &physical_layout0;
     };
 
-     /* ---------- encoder STATUS ---------- */
-    &left_encoder {
-    status = "okay";
-    };
-    &right_encoder {
-    status = "okay";
-    };
-
  
     /* ---------- ENCODERS ---------- */
     
@@ -108,7 +100,16 @@
         triggers-per-rotation = <20>;
     };
 
+
     
+     /* ---------- encoder STATUS ---------- */
+    &left_encoder {
+    status = "okay";
+    };
+    &right_encoder {
+    status = "okay";
+    };
+
 
 
 };
