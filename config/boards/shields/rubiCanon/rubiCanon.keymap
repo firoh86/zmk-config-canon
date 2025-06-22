@@ -47,23 +47,10 @@
     };
 
         /* ---------- ENCODERS ---------- */
-        encoder1_cw {
-            bindings = <&kp C_VOL_UP>; // volumen +
-        };
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
 
-        encoder1_ccw {
-            bindings = <&kp C_VOL_DN>; // volumen -
-        };
-
-        encoder2_cw {
-            bindings = <&kp PG_DN>;
-        };
-
-        encoder2_ccw {
-            bindings = <&kp PG_UP>; // Page Up
-        };
-
-        /* ---------- buttons ---------- */
+        /* ---------- buttons ---------- 
         encoder1_button_binding {
             bindings = <&kp K_MUTE>;
         };
@@ -75,4 +62,6 @@
         extra_button_binding {
             bindings = <&kp CAPSLOCK>; // Caps Lock
         };
+
+        */
 };

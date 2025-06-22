@@ -11,6 +11,13 @@
     &gpio1 {
         status = "okay";
     };
+    /* ---------- encoder STATUS ---------- */
+    &left_encoder {
+    status = "okay";
+    };
+    &right_encoder {
+    status = "okay";
+    };
 
 
 /{
@@ -75,17 +82,34 @@
     };
 
     /* ---------- ENCODERS ---------- */
-    encoder1: encoder1 {
-        compatible = "zmk,encoder";
-        a-gpios = <&gpio0 9 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-        b-gpios = <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <40>;
+        status = "disabled";
     };
 
-    encoder2: encoder2 {
-        compatible = "zmk,encoder";
-        a-gpios = <&gpio1 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-        b-gpios = <&gpio1 2 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+    right_encoder: encoder_right {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <40>;
+        status = "disabled";
     };
+
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <20>;
+    };
+
+};
+
+
+/*
 
     encoder1_button: encoder1_button {
         gpios = <&gpio1 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
@@ -102,4 +126,4 @@
         label = "Extra Button";
     };
 
-};
+*/
