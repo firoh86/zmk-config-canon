@@ -1,5 +1,6 @@
 /* rubiCanon.overlay — SuperMini nRF52840 (10×4, col2row) */
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/zmk/keys.h>
 
 
 /{
