@@ -58,6 +58,8 @@
     };
 
     /* ---------- ENCODERS ---------- */
+    
+    /*
     encoders {
         compatible = "zmk,encoders";
 
@@ -131,6 +133,7 @@
             bindings = <&kp HOME>;
         };
     };
+    */
 
     chosen {
         zmk,physical-layout = &physical_layout0;
