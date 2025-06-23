@@ -62,7 +62,7 @@
         columns = <10>; // total columns
 
         matrix {
-            kscan = <&kscan_matrix>;
+            kscan = <&kscan0>;
         };
 
         direct {
