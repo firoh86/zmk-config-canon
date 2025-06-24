@@ -25,7 +25,6 @@
                 // fila 4 (direct inputs)
                 &kp CAPS &kp N0 &kp N1
             >;
-                //sensor-bindings = <&inc_dec_kp Q W>;
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
