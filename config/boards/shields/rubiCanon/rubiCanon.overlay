@@ -100,16 +100,16 @@
     /* ---------- ENCODERS ---------- */
     left_encoder: encoder_left {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
-        b-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
+        a-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
         steps = <24>;
         status = "okay";
     };
 
     right_encoder: encoder_right {
         compatible = "alps,ec11";
-        a-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
-        b-gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
+        a-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        b-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
         steps = <24>;
         status = "okay";
     };
@@ -117,7 +117,7 @@
      sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
-        triggers-per-rotation = <2>;
+        triggers-per-rotation = <96>;
     };
 };
  
