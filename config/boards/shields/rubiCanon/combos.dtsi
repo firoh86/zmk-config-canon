@@ -54,14 +54,14 @@
         combo_interrogacion_abre {
             timeout-ms = < 50>;
             key-positions = <3 4>; // R y T
-            bindings = <&kp RA(N6)>; // Corregido: no se permiten expresiones anidadas como RA(LSHIFT(N6))
+            bindings = <&kp KP_EQUAL>; 
             layers = <0>;
         };
 
         combo_interrogacion_cierra {
             timeout-ms = < 50>;
             key-positions = <5 6>; // Y y U
-            bindings = <&kp LSHIFT MINUS>; // También corregido: separa modificador y tecla
+            bindings = <&kp MINUS>; 
             layers = <0>;
         };
 
