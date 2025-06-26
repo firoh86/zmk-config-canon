@@ -5,5 +5,10 @@
             #sensor-binding-cells = <1>;
             bindings = <&kp C_VOL_UP &kp C_VOL_DN>;
         };
+        
+        kp: kp {
+            compatible = "zmk,behavior-key-press";
+            #binding-cells = <1>;
+        };
     };
 };
