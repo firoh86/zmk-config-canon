@@ -32,7 +32,7 @@
                 // fila 4 (direct inputs)
                 &kp CAPS
             >;
-                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                sensor-bindings = <&inc_dec_kp &kp C_VOL_UP &kp C_VOL_DN &inc_dec_kp &kp PG_UP &kp PG_DN>;
         };
 
 
@@ -46,19 +46,19 @@
                 // fila 4 (direct inputs)
                 &ext_power EP_TOG  //toogle external power
             >;
-                sensor-bindings = <&inc_dec_kp N1 N0 &inc_dec_kp N2 N3>;
+                sensor-bindings = <&inc_dec_kp &kp C_VOL_UP &kp C_VOL_DN &inc_dec_kp &kp PG_UP &kp PG_DN>;
         };
 
         layer_2 {
             bindings = <//perfiles de configuracion
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR         &kp PG_UP &kp UP &kp PG_DN &trans &kp LEFT_GUI
-                &kp LS(N1) &kp APOSTROPHE &kp APOSTROPHE &kp EQUAL &kp GRAVE           &kp LEFT &kp DOWN &kp RIGHT &trans &trans
+                &kp LS(N1) &kp APOSTROPHE &kp APOSTROPHE &kp EQUAL &kp GRAVE           &kp LEFT &kp DOWN &kp RIGH       T &trans &trans
                 &trans &trans &trans &trans &trans                                     &kp C_VOL_UP &kp HOME &kp C_VOL_DN &trans &out OUT_TOG
                 &trans &trans &mo 3                                                    &trans   &trans   &trans
                 // fila 4 (direct inputs)
                 &out OUT_BLE
             >;
-            sensor-bindings = <&inc_dec_kp N1 N0 &inc_dec_kp N2 N3>;
+            sensor-bindings = <&inc_dec_kp &kp C_VOL_UP &kp C_VOL_DN &inc_dec_kp &kp PG_UP &kp PG_DN>;
         };
 
         layer_3 {
@@ -70,7 +70,7 @@
                 // fila 4 (direct inputs)
                 &out OUT_BLE
             >;
-            sensor-bindings = <&inc_dec_kp N1 N0 &inc_dec_kp N2 N3>;
+            sensor-bindings = <&inc_dec_kp &kp C_VOL_UP &kp C_VOL_DN &inc_dec_kp &kp PG_UP &kp PG_DN>;
         };
     };
 
