@@ -10,5 +10,9 @@
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
         };
+        mo: mo {
+            compatible = "zmk,behavior-momentary-layer";
+            #binding-cells = <1>;
+        };
     };
 };
