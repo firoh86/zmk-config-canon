@@ -1,18 +1,34 @@
 / {
     behaviors {
-        inc_dec_kp: inc_dec_kp {
-            compatible = "zmk,behavior-sensor-key-press";
-            #sensor-binding-cells = <1>;
-            bindings = <&kp C_VOL_UP &kp C_VOL_DN>;
-        };
-        
         kp: kp {
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
         };
+
         mo: mo {
             compatible = "zmk,behavior-momentary-layer";
             #binding-cells = <1>;
+        };
+
+        bt: bt {
+            compatible = "zmk,behavior-bluetooth";
+            #binding-cells = <1>;
+        };
+
+        out: out {
+            compatible = "zmk,behavior-output-selection";
+            #binding-cells = <1>;
+        };
+
+        ext_power: ext_power {
+            compatible = "zmk,behavior-ext-power";
+            #binding-cells = <1>;
+        };
+
+        inc_dec_kp: inc_dec_kp {
+            compatible = "zmk,behavior-sensor-key-press";
+            #sensor-binding-cells = <1>;
+            bindings = <&kp C_VOL_UP &kp C_VOL_DN>;
         };
     };
 };
