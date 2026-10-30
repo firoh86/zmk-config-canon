@@ -182,8 +182,8 @@ Cuando el teclado se conecta y desconecta todo el rato, o no aparece en la lista
 
 1. Descarga el firmware: en GitHub, pestaña **Actions** → última ejecución con ✔ → al final, en **Artifacts**, descarga `firmware`.
 2. Conecta el teclado por USB y **pulsa dos veces rápido el botón de reset (`RST1`)** de la PCB. Aparecerá una unidad USB en el ordenador (como un pendrive).
-3. Arrastra a esa unidad el archivo **`settings_reset-nice_nano_v2-zmk.uf2`**. La unidad desaparece sola: es normal. Esto borra todos los perfiles del teclado.
-4. Vuelve a pulsar `RST1` dos veces y arrastra **`rubiCanon-nice_nano_v2-zmk.uf2`** (el firmware normal).
+3. Arrastra a esa unidad el archivo que empieza por **`settings_reset-`** (algo como `settings_reset-nice_nano__zmk-zmk.uf2`). La unidad desaparece sola: es normal. Esto borra todos los perfiles del teclado.
+4. Vuelve a pulsar `RST1` dos veces y arrastra el archivo que empieza por **`rubiCanon-`** (el firmware normal).
 5. En **todos** tus dispositivos, elimina "rubiCanon" de la lista de Bluetooth.
 6. Empareja de nuevo siguiendo "Conectar un dispositivo nuevo".
 
