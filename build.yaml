@@ -2,3 +2,6 @@
 include:
   - board: nice_nano_v2
     shield: rubiCanon
+  # Firmware para borrar emparejamientos BLE guardados en flash
+  - board: nice_nano_v2
+    shield: settings_reset

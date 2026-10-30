@@ -11,11 +11,14 @@
     &gpio1 {
         status = "okay";
     };
-   
+
+    /* P0.09 y P0.10 son pines NFC: necesarios como GPIO para el encoder izquierdo */
+    &uicr {
+        nfct-pins-as-gpios;
+    };
+
 
 /{
-    compatible = "zmk,keyboard-shield";
-
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
@@ -101,7 +104,7 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <48>;
+        steps = <48>; /* rueda de ratón 12 pulsos/24 clicks: 12 × 4 transiciones */
         status = "okay";
     };
 
@@ -109,14 +112,14 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <48>;
+        steps = <48>; /* rueda de ratón 12 pulsos/24 clicks: 12 × 4 transiciones */
         status = "okay";
     };
 
      sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
-        triggers-per-rotation = <24>;
+        triggers-per-rotation = <24>; /* 1 evento por click */
     };
 };
  
