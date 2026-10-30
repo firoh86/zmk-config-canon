@@ -5,3 +5,9 @@ include:
   # Firmware para borrar emparejamientos BLE guardados en flash
   - board: nice_nano//zmk
     shield: settings_reset
+  # Firmware de diagnóstico: log por USB (incluye cada paso de los encoders)
+  - board: nice_nano//zmk
+    shield: rubiCanon
+    snippet: zmk-usb-logging
+    cmake-args: -DCONFIG_SENSOR_LOG_LEVEL_DBG=y
+    artifact-name: rubiCanon-logging

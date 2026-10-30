@@ -29,8 +29,8 @@ Números = posición de la tecla en el keymap (es lo que usan los `key-positions
 
 | Rueda | Pines A/B | Sentido horario | Sentido antihorario |
 |---|---|---|---|
-| Izquierda (RE1) | P0.09 / P0.10 (pines NFC) | Vol+ | Vol- |
-| Derecha (RE2) | P1.01 / P1.02 | PgUp | PgDn |
+| Derecha (RE01) | P0.09 / P0.10 (pines NFC) | Vol+ | Vol- |
+| Izquierda (RE02) | P1.01 / P1.02 (pads interiores de la SuperMini) | PgUp | PgDn |
 
 Son ruedas de ratón de 12 pulsos / 24 clicks: `steps = <48>`, `triggers-per-rotation = <24>` → 1 evento por click.
 
